@@ -11,3 +11,77 @@
  *= require_self
  *= require_tree .
  */
+
+html {
+/*	background-color: #e6e6e6;*/
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	margin-top:400px;  	
+	background-position: center
+}
+
+.fa {
+	font-family: 'font-awesome', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	
+}
+
+#settings {
+	background-color: #4e4e4e;
+	opacity: .8;
+	width: 10px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	padding-left: 35px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	margin-right: 20px;
+}
+
+#city {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 50px;
+	color: white;
+	opacity: 1;
+	margin-bottom: -10px;
+	padding-bottom: -10px;
+	margin-top: 0px;
+	padding-top: -10px;
+	font-color: white;
+	position: relative;
+	font-weight: 300;
+}
+
+#weather {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 32px;
+	color:white;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	font-color: white;
+	opacity: 1;
+	position: relative;
+	font-weight: 200;
+}
+
+
+#main {
+	background-color: #4e4e4e;
+	opacity: .8;
+	float: right;
+	width: 70%;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	padding-left: 35px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	margin-bottom: 125px;
+}
+
