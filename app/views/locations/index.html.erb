@@ -6,20 +6,21 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+
 <script>
-// navigator.geolocation.getCurrentPosition(
-//  function(position) {
-//    console.log("You were last spotted at (" + position.coords.latitude +
-//     "," + position.coords.longitude + ")");
-//    var lat1 = position.coords.latitude.toString().replace('.', 'x')
-//    var long1 = position.coords.longitude.toString().replace('.', 'x')
-//    console.log(lat1 + " " + long1)
-//   $.get(/conditions/lat1 + "/" + long1);
-// });
+$(document).on('click', "#nextpage", function(){
+
+navigator.geolocation.getCurrentPosition(
+ function(position) {
+   console.log("You were last spotted at (" + position.coords.latitude +
+    "," + position.coords.longitude + ")");
+   var lat1 = position.coords.latitude.toString().replace('.', 'x');
+   var long1 = position.coords.longitude.toString().replace('.', 'x');
+   console.log(lat1 + " " + long1);
+  $.post(/locations/lat1 + "/" + long1);
+})
+});
 
 </script>
 
-<button id="nextpage">test
-
-
-</button>
+<button id="nextpage">test</button>
