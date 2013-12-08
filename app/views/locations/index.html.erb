@@ -8,19 +8,24 @@
 
 
 <script>
-$(document).on('click', "#nextpage", function(){
-
 navigator.geolocation.getCurrentPosition(
  function(position) {
    console.log("You were last spotted at (" + position.coords.latitude +
     "," + position.coords.longitude + ")");
    var lat1 = position.coords.latitude.toString().replace('.', 'x');
    var long1 = position.coords.longitude.toString().replace('.', 'x');
-   console.log(lat1 + " " + long1);
-  $.post(/locations/lat1 + "/" + long1);
-})
+   // console.log(lat1 + " " + long1);
+
+$(document).ready(function () {
+    // Handler for .ready() called.
+    window.setTimeout(function () {
+        location.href = "/locations/"+ lat1 + "/" + long1;
+    }, 0)
 });
 
-</script>
 
-<button id="nextpage">test</button>
+})
+
+
+
+</script>
