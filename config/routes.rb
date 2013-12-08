@@ -1,5 +1,5 @@
 WeatherPane::Application.routes.draw do
-  root "conditions#index"
-  get '/javascripturl/:latitude/:longitude' => "conditions#index"
-end
+  root "locations#index"
+  get '/locations/:latitude/:longitude' => "locations#show"
 
+end
