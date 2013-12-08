@@ -6,7 +6,14 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-<body background="<%= @icon %>">
+<body id = "show" background="<%= @icon %>" no-repeat center center fixed;>
+
+<style type="text/css">
+#<%= @current_condition %>	{
+	color: white;
+}
+
+</style>
 
 	<div id="up_top">
 	<%=  %>  
@@ -17,8 +24,27 @@
 	</div>
 
 	<div id="main">
-		<h1 id="city"><%= @current_city %>,<%= @current_state %></h1>
+		<div id ="skycon">
+		<canvas id="<%= @current_condition %>" width="64" height="64"></canvas></div>
+
+		<h1 id="city"><%= @current_city %>, <%= @current_state %></h1>
 		<p id ="weather"><%= @current_temp.ceil %>°F, <%= @current_condition.capitalize %></p>
 	</div>
+
+<script>
+	var icons = new Skycons (),
+		list  = [
+                "<%= @current_condition %>"
+              ],
+              i;
+
+              // list = "<%= @current_condition %>"
+          for(i = list.length; i--; )
+            icons.set(list[i], list[i]);
+
+          icons.play();
+</script>
+
+
 </body>
 
