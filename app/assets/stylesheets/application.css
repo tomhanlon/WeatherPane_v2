@@ -26,6 +26,10 @@ body {
 	background-repeat: no-repeat;
 }
 
+#up_top {
+	
+}
+
 .fa {
 	font-family: 'font-awesome', sans-serif;
 	font-size: 30px;
@@ -36,7 +40,7 @@ body {
 	margin-top:10px;	
 }
 
-#settings {
+#open_settings {
 	background-color: #4e4e4e;
 	opacity: .8;
 	width: 10px;
@@ -76,7 +80,6 @@ body {
 	font-weight: 200;
 }
 
-
 #main {
 	background-color: #4e4e4e;
 	opacity: .8;
@@ -90,4 +93,6 @@ body {
 	right: 0px;
 	margin-bottom: 50px;
 }
+
+
 

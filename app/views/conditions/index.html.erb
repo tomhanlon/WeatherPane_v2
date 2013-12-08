@@ -14,11 +14,14 @@ navigator.geolocation.getCurrentPosition(
    var lat1 = position.coords.latitude.toString().replace('.', 'x')
    var long1 = position.coords.longitude.toString().replace('.', 'x')
    console.log(lat1 + " " + long1)
-
 </script>
 
+<div id="up_top">
+	<%= form_tag(:controller => "posts", :action => "create") do %>  
+</div>
+
 <body background="<%= @icon %>">
-<div id="settings">
+<div id="open_settings">
 	<a href="#"><i class="fa fa-cog"></i></a>
 </div>
 
