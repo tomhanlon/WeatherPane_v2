@@ -36,7 +36,7 @@ class LocationsController < ApplicationController
       when 'fog'
         @icon = '/images/fog.jpg'
       when 'partly-cloudy-night'
-        @icon = '/images/partly-cloudly-night.jpg'
+        @icon = '/images/partly-cloudy-night.jpg'
       when 'partly-cloudy-day'
         @icon = '/images/partly-cloudy-day.jpg'
       when 'sleet'
