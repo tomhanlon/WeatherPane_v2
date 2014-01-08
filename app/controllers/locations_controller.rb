@@ -21,9 +21,16 @@ class LocationsController < ApplicationController
     @current_temp = response.body['currently']['temperature']
 
     place = Unirest.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=#{new1},#{new2}&sensor=true")
-    @current_city = place.body['results'][0]['address_components'][3]['long_name']
-    @current_state = place.body['results'][0]['address_components'][5]['short_name']
+    
+    # if place.body['status'] = "ZERO_RESULTS" 
+    #   redirect_to "http://google.com"
+    # else
+      @current_city = place.body['results'][0]['address_components'][3]['long_name']
+      @current_state = place.body['results'][0]['address_components'][5]['short_name']
+    # end
 
+# @icon = "/images/#{ @current_condition }.jpg"     
+  
   case @current_condition
       when 'rain'
         @icon = '/images/rain.jpg'

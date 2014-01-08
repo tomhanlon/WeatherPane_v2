@@ -27,7 +27,7 @@
 		<div id ="skycon">
 		<canvas id="<%= @current_condition %>" width="64" height="64"></canvas></div>
 
-		<h1 id="city"><%= @current_city %>, <%= @current_state %></h1>
+		<h1 id="city"><%= @current_city + ","%> <%= @current_state %></h1>
 		<p id ="weather"><%= @current_temp.ceil %>°F, <%= @current_condition.capitalize %></p>
 	</div>
 
